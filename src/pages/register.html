@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas | Registrar-se</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/styles/register.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+</head>
+<body>
+    <nav class="headerRegister">
+        <div>
+            <div></div>
+            <img src="/src/assets/img/KenzieEmpresas.svg" alt="">
+        </div>
+        <a href="" class="openMenuBtn"><img class="buttonImg" src="/src/assets/icons/menuVector.svg" alt=""></a>
+    </nav>
+    <ul class="menuDown">
+        <li>
+            <a href="/src/pages/homepage.html">Home</a>
+        </li>
+        <li>
+            <a href="/src/pages/index.html">Login</a>
+        </li>
+    </ul>
+    <main>
+        <form action="">
+            <h1>Cadastre-se</h1>
+            <div class="inputContainer">
+                <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
+                <input type="password" name="password" id="password" placeholder="Sua senha" required>
+                <select required>
+                    <option value="">Nível Profissional</option>
+                    <option value="junior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Sênior</option>
+                </select>
+            </div>
+            <button type="submit" class="registerBtn">Cadastre-se</button>
+            <button type="button" class="returnBtn" onclick="history.back()">Retornar</button>
+        </form>
+    </main>
+    <script src="/src/scripts/register.js"></script>
+</body>
+</html>
