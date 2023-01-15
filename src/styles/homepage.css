@@ -1,3 +1,7 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
 .headerHome{
     display: flex;
     flex-direction: row;
@@ -68,7 +72,8 @@
 
 main{
     display: flex;
-    justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 .imageAside{
@@ -78,12 +83,10 @@ main{
 .companyList{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     margin-top: 1.5rem;
-    width: 90%;
-    
+    width: 100%;
+    padding: 0rem 1rem;
 }
 
 .companyList > select{
@@ -97,11 +100,12 @@ main{
 .companyBox{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     background-color: #F8F8F8;
-    padding: 1.625rem 0rem;
-
-    gap: 1rem;
+    
+    padding: 0rem 1.25rem;
+    padding-top: 1.625rem;
+    padding-bottom: 2.625rem;
+    gap: 1.25rem;
     width: 100%;
     overflow-x: auto;
 }
@@ -110,11 +114,10 @@ main{
     display: flex;
     flex-direction: column;
     background-color: var(--white-fixed);
-
-    padding: 1rem;
-    margin-left: 1rem;
-
     border-bottom: solid 1px var(--primary-color-1);
+    padding: 1rem 3rem 1.875rem 1rem;
+    width: fit-content;
+    height: auto;
 }
 
 .companyCard > h2{
@@ -149,6 +152,16 @@ main{
         padding: 1.875rem 8.75rem;
     }
     
+    main{
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        width: 100%;
+
+        margin-top: 2.625rem;
+        margin-bottom: 3rem;
+    }
+
     .menuDown{
         display: flex;
         flex-direction: row;
@@ -178,5 +191,42 @@ main{
     
     .menuDown > li > a{
         text-decoration: none;
+    }
+
+    .companyList{
+        width: 40%;
+        align-self: flex-start;
+        max-height: 47rem;
+        margin-top: 0;
+    }
+
+    .companyBox{
+        flex-direction: column;
+        padding: 0rem 2rem;
+        padding-top: 1.625rem;
+        padding-bottom: 3.625rem;
+        max-height: 47rem;
+        overflow-y: auto;
+        overflow-x: none;
+    }
+
+    .companyCard{
+        width: 100%;
+    }
+
+    .imageAside{
+        display: flex;
+
+        margin-right: 2rem;
+        
+        width: 37%;
+        height: 47rem;
+        background-image: url(/src/assets/img/Rectangle7.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: left;
+        
+        
     }
 }
