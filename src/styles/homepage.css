@@ -113,6 +113,7 @@ main{
 .companyCard{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: var(--white-fixed);
     border-bottom: solid 1px var(--primary-color-1);
     padding: 1rem 3rem 1.875rem 1rem;

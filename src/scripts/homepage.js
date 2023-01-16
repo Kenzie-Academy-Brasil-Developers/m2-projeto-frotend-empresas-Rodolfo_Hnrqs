@@ -18,5 +18,25 @@ function openDownMenu(){
 }
 
 
+async function renderEmpresas(){
+    const companyBox = document.querySelector(".companyBox");
+    const listagemEmpresas = await getApiEmpresas("http://localhost:6278/companies");
+    listagemEmpresas.forEach(empresa => {
+        const companyDivCard = document.createElement("div");
+        const companyTitle = document.createElement("h2");
+        const time = document.createElement("p");
+        const sector = document.createElement("span");
+
+        companyDivCard.classList.add("companyCard");
+        companyTitle.innerText = `${empresa.name}`;
+        time.innerText = `${empresa.opening_hours}`;
+        sector.innerText = `${empresa.sectors.description}`;
+
+        companyBox.appendChild(companyDivCard);
+        companyDivCard.append(companyTitle, time, sector);
+    });
+}
+
 
 openDownMenu();
+renderEmpresas();
